@@ -73,6 +73,32 @@ namespace DataStructure
                 Console.WriteLine(parent.Data + " ");
             }
         }
+        public Node Search(Node Root, int Key)
+        {
+            if (Root == null)
+            {
+                return Root;
+            }
+            else if (Key == Root.Data)
+            {
+                return Root;
+
+            }
+
+            else if (Key < Root.Data)
+            {
+
+                return Search(Root.LeftNode, Key);
+
+            }
+            else
+            {
+
+                return Search(Root.RightNode, Key);
+
+            }
+
+        }
         public int getsize(Node Root)
         {
             if (Root == null)
