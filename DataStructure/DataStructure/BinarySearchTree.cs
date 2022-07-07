@@ -73,5 +73,16 @@ namespace DataStructure
                 Console.WriteLine(parent.Data + " ");
             }
         }
+        public int getsize(Node Root)
+        {
+            if (Root == null)
+            {
+                return 0;
+            }
+            int leftSize = getsize(Root.LeftNode);
+            int rightSize = getsize(Root.RightNode);
+
+            return leftSize + rightSize + 1;
+        }
     }
 }
